@@ -1,6 +1,10 @@
 .footer {
   padding-top: 88px;
   padding-bottom: 48px;
+  @include media-query('tablet') {
+    padding-top: 44px;
+    padding-bottom: 24px;
+  }
 
   &__top {
     display: flex;
@@ -9,18 +13,36 @@
     align-self: stretch;
     padding-bottom: 32px;
     border-bottom: 1px solid $color-btn-sec;
+    @include media-query('tablet') {
+      flex-direction: column;
+      align-items: start;
+      justify-content: center;
+      gap: 16px;
+    }
   }
 
   &__left {
     display: flex;
     align-items: flex-end;
     gap: 64px;
+    @include media-query('tablet') {
+      flex-direction: column;
+      align-items: start;
+      justify-content: center;
+      gap: 16px;
+    }
   }
 
   &__links {
     display: flex;
     align-items: center;
     gap: 40px;
+    @include media-query('tablet') {
+      flex-direction: column;
+      align-items: start;
+      justify-content: center;
+      gap: 16px;
+    }
   }
 
   &__link {

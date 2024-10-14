@@ -26,6 +26,7 @@ sliderItems.forEach((item) => {
 document.addEventListener('DOMContentLoaded', () => {
   const headerBurger = document.querySelector('.header__burger');
   const headerNav = document.querySelector('.header__nav');
+  const navLinks = document.querySelectorAll('.nav__item'); // Отримуємо всі елементи навігації
 
   const body = document.body;
 
@@ -35,9 +36,12 @@ document.addEventListener('DOMContentLoaded', () => {
     body.classList.toggle('no-scroll');
   });
 
-  headerNav.addEventListener('click', () => {
-    headerBurger.classList.remove('active');
-    headerNav.classList.remove('open');
-    body.classList.remove('no-scroll');
+  // Закриття меню при кліку на навігаційний елемент
+  navLinks.forEach((link) => {
+    link.addEventListener('click', () => {
+      headerBurger.classList.remove('active');
+      headerNav.classList.remove('open');
+      body.classList.remove('no-scroll');
+    });
   });
 });
