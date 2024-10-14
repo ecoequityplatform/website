@@ -1,0 +1,116 @@
+.btn {
+  display: flex;
+  min-width: 160px;
+  padding: $gap-md;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  border-radius: $radius-rounded;
+  border: none;
+  text-align: center;
+  font-family: $font-satoshi;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px;
+  @include media-query('mobile') {
+    width: 100%;
+  }
+
+  &__main {
+    background: $color-btn-main;
+    color: $color-text-ter;
+
+    &:hover {
+      background: $color-btn-hover;
+      color: $color-text-ter;
+    }
+  }
+
+  &__sec {
+    border: 1px solid $color-btn-main;
+    color: $color-text-main;
+    background: none;
+
+    &:hover {
+      border: 1px solid $color-bg-card;
+      background: $color-bg-card;
+      color: $color-text-main;
+    }
+  }
+
+  &__ter {
+    border: 1px solid $color-btn-sec;
+    color: $color-btn-sec;
+    background: none;
+
+    &:hover {
+      border: 1px solid $color-btn-sec-hover;
+
+      color: $color-btn-sec-hover;
+    }
+  }
+}
+
+.tag {
+  display: flex;
+  padding: 8px 16px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  border-radius: $radius-md;
+  background: #282c29;
+  color: #8b9a93;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 18px;
+  @include media-query('tablet') {
+    padding: 4px 8px;
+    font-size: 12px;
+    line-height: 14px;
+    border-radius: $radius-sm;
+  }
+}
+
+input,
+textarea {
+  display: inline-flex;
+  width: 100%;
+  padding: 12px 16px;
+  align-items: center;
+  gap: 20px;
+  border-radius: 8px;
+  border: 1px solid $color-border-light;
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(3.950000047683716px);
+  color: $color-text-main;
+  font-family: $font-satoshi;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px; /* 133.333% */
+  &::placeholder {
+    color: #8b9a93;
+    font-family: $font-satoshi;
+    font-size: 18px;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 24px;
+  }
+  input:-webkit-autofill,
+  textarea:-webkit-autofill,
+  input:-internal-autofill-selected {
+    appearance: menulist-button !important;
+    background-image: none !important;
+    background-color: rgba(255, 255, 255, 0.04) !important;
+    color: fieldtext !important;
+  }
+  &:focus-visible {
+    outline: none;
+  }
+}
+
+textarea {
+  height: 96px;
+}

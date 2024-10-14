@@ -1,0 +1,117 @@
+.benefits {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 48px;
+  padding-top: 96px;
+  padding-bottom: 96px;
+  position: relative;
+
+  &__content {
+    padding-top: 52px;
+    width: 100%;
+    max-width: 1116px;
+    position: relative;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: -16px;
+  }
+  &__title {
+    position: absolute;
+    top: 0;
+  }
+
+  &__row {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    align-self: stretch;
+    @include media-query('tablet') {
+      flex-wrap: wrap;
+    }
+  }
+
+  &__item {
+    display: flex;
+    padding: $padding-xl;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: $gap-2xl;
+    flex: 1 0 0;
+    border-radius: $radius-lg;
+    border: 1px solid $color-border-light;
+    background: rgba(229, 236, 233, 0.05);
+    backdrop-filter: blur(8.5px);
+  }
+
+  &__copy {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    align-self: stretch;
+  }
+}
+
+.btn__custom {
+  position: absolute;
+  top: -10px;
+  right: -78px;
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  width: 156px;
+  height: 156px;
+  background: linear-gradient(
+    228deg,
+    rgba(255, 118, 89, 0.1) 16.5%,
+    rgba(124, 233, 72, 0.15) 84.25%
+  );
+  transition: all 1000ms linear;
+
+  &:hover {
+    background: linear-gradient(
+      228deg,
+      rgba(255, 118, 89, 0.4) 16.5%,
+      rgba(124, 233, 72, 0.4) 84.25%
+    );
+
+    & .btn__custom-inner {
+      color: #ff7659;
+    }
+  }
+  @include media-query('tablet') {
+    display: none;
+  }
+
+  &-border {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    width: 128px;
+    height: 128px;
+    background: linear-gradient(228deg, #ff7659 16.5%, #7ce948 84.25%);
+  }
+
+  &-inner {
+    display: flex;
+    width: 124px;
+    height: 124px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    border-radius: 50%;
+    background: $color-bg-main;
+    color: $color-btn-sec;
+    text-align: center;
+    font-family: $font-satoshi;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 22px;
+  }
+}

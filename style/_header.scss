@@ -1,0 +1,135 @@
+.header {
+  width: 100%;
+  display: flex;
+  padding: 40px 48px;
+  justify-content: space-between;
+  align-items: center;
+  align-self: stretch;
+
+  @include media-query('mobile') {
+    padding: 16px 24px;
+  }
+
+  &__logo {
+    width: 180px;
+    height: 48px;
+
+    @include media-query('mobile') {
+      width: 150px;
+      height: 40px;
+    }
+  }
+
+  &__nav {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    @include media-query('tablet') {
+      display: none;
+      position: fixed;
+      height: 100vh;
+      width: 100%;
+      right: 0;
+      left: 0;
+      z-index: 10;
+      background: $color-bg-main;
+
+      &.open {
+        display: flex;
+      }
+    }
+  }
+
+  &__burger {
+    display: none;
+    z-index: 10;
+    height: 48px;
+    width: 48px;
+    border-radius: 64px;
+    background: #2c3430;
+
+    @include media-query('tablet') {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 3px;
+      cursor: pointer;
+
+      &.active &__item:nth-child(2) {
+        opacity: 0;
+      }
+
+      &.active &__item:nth-child(1) {
+        transform: translateY(5px) rotate(45deg);
+      }
+
+      &.active &__item:nth-child(3) {
+        transform: translateY(-5px) rotate(-45deg);
+      }
+    }
+    &__item {
+      display: block;
+      width: 21px;
+      height: 2px;
+      border-radius: 10px;
+      background-color: $color-btn-sec;
+    }
+  }
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+
+  @include media-query('tablet') {
+    width: 100%;
+    gap: 2.5rem;
+    position: fixed;
+    flex-direction: column;
+    top: 80px;
+    align-items: center;
+  }
+
+  &__item {
+    display: block;
+    height: 32px;
+    margin-right: 40px;
+    font-family: $font-satoshi;
+    position: relative;
+    display: flex;
+    align-items: center;
+    transition: all 300ms cubic-bezier(0.075, 0.82, 0.165, 1);
+
+    &:after {
+      content: '';
+      position: absolute;
+      width: 0%;
+      height: 1px;
+      display: block;
+      transition: all 0.3s ease;
+      bottom: 0;
+      @include media-query('tablet') {
+        display: none;
+      }
+    }
+
+    &:hover::after {
+      width: 100%;
+      height: 1px;
+      background-color: $color-btn-sec;
+    }
+  }
+
+  &__link {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+    color: #fff;
+
+    @include media-query('tablet') {
+      font-size: 20px;
+    }
+  }
+}

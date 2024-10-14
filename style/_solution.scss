@@ -1,0 +1,87 @@
+.solution {
+  padding-top: 224px;
+  padding-bottom: 88px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 96px;
+  @include media-query('tablet') {
+    padding-top: 112px;
+    padding-bottom: 44px;
+    gap: 32px;
+  }
+
+  &__lines {
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: rotate(180deg);
+    @include media-query('tablet') {
+      width: 300px;
+    }
+  }
+  &__block {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 40px;
+    align-self: stretch;
+    text-align: start;
+    @include media-query('tablet') {
+      gap: 16px;
+    }
+  }
+
+  &__text {
+    color: $color-text-sec;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 32px;
+    max-width: 942px;
+    @include media-query('tablet') {
+      font-size: 16px;
+      line-height: 20px;
+    }
+  }
+
+  &__title {
+    color: $color-btn-sec;
+  }
+}
+
+.expand-item {
+  width: 100%;
+  margin: 10px auto;
+  border-bottom: 1px solid $color-border-light;
+  padding-bottom: 40px;
+  @include media-query('tablet') {
+    padding-bottom: 16px;
+  }
+}
+
+.expand-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  font-weight: bold;
+  align-items: center;
+
+  & img {
+    @include media-query('tablet') {
+      width: 24px;
+      height: 24px;
+    }
+  }
+}
+
+.expand-content {
+  display: none;
+  padding-top: 32px;
+
+  @include media-query('tablet') {
+    padding-top: 16px;
+  }
+}

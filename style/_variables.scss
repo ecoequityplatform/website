@@ -1,0 +1,63 @@
+// Border Radius
+$radius-rounded: 120px;
+$radius-xl: 24px;
+$radius-lg: 16px;
+$radius-md: 8px;
+$radius-sm: 4px;
+$radius-reset: 0px;
+
+// Padding
+$padding-2xl: 32px;
+$padding-xl: 24px;
+$padding-lg: 16px;
+$padding-md: 12px;
+$padding-sm: 8px;
+$padding-xs: 4px;
+$padding-reset: 0px;
+
+// Gap
+$gap-2xl: 32px;
+$gap-xl: 24px;
+$gap-lg: 16px;
+$gap-md: 12px;
+$gap-sm: 8px;
+$gap-xs: 4px;
+$gap-reset: 0px;
+
+// Colors
+$color-bg-main: #161b17;
+$color-bg-card: #2c3430;
+$color-bg-inactive: #2c3430;
+$color-btn-main: #fff;
+$color-btn-hover: #e5ece9;
+$color-btn-sec: #7ce949;
+$color-btn-sec-hover: #007c17;
+$color-error: #de5032;
+$color-text-main: #fff;
+$color-text-sec: #e5ece9;
+$color-text-ter: #161b17;
+$color-text-inactive: #545957;
+$color-border-strong: #8b9a93;
+$color-border-light: #2c3430;
+$color-icon-main: #007c17;
+$color-icon-sec: #161b17;
+$color-icon-inactive: #545957;
+
+// Typography
+$font-satoshi: 'Satoshi', sans-serif;
+
+@mixin media-query($breakpoint) {
+  @if $breakpoint == 'mobile' {
+    @media only screen and (max-width: 599px) {
+      @content;
+    }
+  } @else if $breakpoint == 'tablet' {
+    @media only screen and (max-width: 1023px) {
+      @content;
+    }
+  } @else if $breakpoint == 'desktop' {
+    @media only screen and (min-width: 1024px) {
+      @content;
+    }
+  }
+}
