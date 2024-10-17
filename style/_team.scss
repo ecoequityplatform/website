@@ -71,8 +71,19 @@
   }
 
   &__img {
-    border-radius: 16px;
-    width: 100%;
+    object-fit: cover;
+    height: 100%;
+
+    &-wrapper {
+      max-width: 373px;
+      width: 100%;
+      border-radius: 16px;
+      overflow: hidden;
+      height: 406px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
   }
 
   &__actions {
@@ -180,6 +191,9 @@
   background-color: rgba(0, 0, 0, 0.7);
   justify-content: end;
   align-items: start;
+  @include media-query('tablet') {
+    justify-content: start;
+  }
 
   &__img {
     width: 100%;
@@ -189,19 +203,25 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    overflow: hidden;
 
     & img {
       height: 100%;
+      justify-content: end;
     }
   }
 
   &__title {
-    color: var(--Text-Tertiary, #161b17);
-    font-family: Satoshi;
+    color: $color-text-ter;
     font-size: 20px;
     font-style: normal;
     font-weight: 500;
     line-height: 28px;
+
+    @include media-query('tablet') {
+      font-size: 16px;
+      line-height: 18px;
+    }
   }
 
   &__header {
@@ -219,6 +239,11 @@
     font-weight: 400;
     line-height: var(--Line-Height-xs, 24px); /* 133.333% */
     overflow: scroll;
+
+    @include media-query('tablet') {
+      font-size: 16px;
+      line-height: 18px;
+    }
   }
 
   &__links {
@@ -237,6 +262,10 @@
     justify-self: start;
     width: 100%;
     overflow: scroll;
+
+    @include media-query('tablet') {
+      padding: 20px 24px;
+    }
   }
 
   &__line {
@@ -252,6 +281,10 @@
     font-style: normal;
     font-weight: 500;
     line-height: 56px;
+    @include media-query('tablet') {
+      font-size: 32px;
+      line-height: 40px;
+    }
   }
 
   &__head {
@@ -270,6 +303,9 @@
   flex-direction: column;
   align-items: flex-start;
   overflow: scroll;
+  @include media-query('tablet') {
+    width: 100%;
+  }
 }
 
 .popup__close {

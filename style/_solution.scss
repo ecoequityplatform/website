@@ -49,6 +49,14 @@
   &__title {
     color: $color-btn-sec;
   }
+
+  &__header {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    align-items: center;
+    justify-content: center;
+  }
 }
 
 .expand-item {
