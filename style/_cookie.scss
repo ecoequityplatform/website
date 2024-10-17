@@ -1,0 +1,74 @@
+.cookie {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: end;
+  z-index: 10;
+
+  &__inner {
+    display: flex;
+    width: 100%;
+    padding: 24px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+    border-top: 1px solid var(--Border-Light, #545957);
+    background: #161b17;
+  }
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-self: stretch;
+  }
+
+  &__title {
+    color: $color-text-main;
+    font-size: 20px;
+    font-weight: 500;
+  }
+
+  &__bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    align-self: stretch;
+    @include media-query('tablet') {
+      flex-direction: column;
+      justify-content: center;
+      gap: 16px;
+    }
+  }
+
+  &__actions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    @include media-query('mobile') {
+      flex-direction: column;
+      justify-content: center;
+      gap: 8px;
+      width: 100%;
+    }
+  }
+
+  &__text {
+    max-width: 800px;
+    color: $color-text-sec;
+
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+
+  &__link {
+    color: $color-btn-sec;
+    font-weight: 500;
+  }
+}

@@ -1,0 +1,50 @@
+.policy {
+  display: flex;
+  padding: 88px 0;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+  align-self: stretch;
+  text-align: start;
+
+  &__title {
+    max-width: 1120px;
+    width: 100%;
+    text-align: start;
+  }
+
+  &__copy {
+    max-width: 1120px;
+    width: 100%;
+    text-align: start;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  &__link {
+    color: $color-btn-sec;
+  }
+
+  &__nav {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+
+  &__item {
+    color: white;
+    text-decoration: underline;
+  }
+
+  &__browsers {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    list-style: circle;
+    padding-left: 24px;
+    color: $color-btn-sec;
+  }
+}

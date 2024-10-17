@@ -6,40 +6,23 @@
   align-items: center;
   gap: 96px;
   align-self: stretch;
+  overflow: hidden;
   @include media-query('tablet') {
     padding-top: 44px;
     padding-bottom: 48px;
     gap: 16px;
   }
 
-  &__items {
-    display: flex;
-    align-items: center;
-    gap: 40px;
-    align-self: stretch;
-    flex-wrap: wrap;
-    justify-content: center;
-
-    @include media-query('mobile') {
-      gap: 16px;
-    }
-  }
-
   &__item {
     display: flex;
+    padding: 24px;
     flex-direction: column;
     align-items: flex-start;
     gap: 18px;
     flex: 1 0 0;
-    max-width: 360px;
-    @include media-query('tablet') {
-      max-width: 220px;
-      gap: 16px;
-    }
-    @include media-query('mobile') {
-      max-width: 160px;
-      gap: 8px;
-    }
+    border-radius: 24px;
+    background: $color-bg-card;
+    margin: 0 15px;
   }
 
   &__title {
@@ -47,11 +30,8 @@
     font-size: 20px;
     font-style: normal;
     font-weight: 500;
-    line-height: 28px;
-    @include media-query('tablet') {
-      font-size: 16px;
-      line-height: 18px;
-    }
+    line-height: 22px;
+    text-align: start;
   }
 
   &__name {
@@ -61,10 +41,7 @@
     font-weight: 500;
     line-height: 48px;
     text-align: left;
-    @include media-query('tablet') {
-      font-size: 24px;
-      line-height: 28px;
-    }
+    max-width: 200px;
   }
 
   &__description {
@@ -94,14 +71,220 @@
   }
 
   &__img {
-    width: 360px;
-    @include media-query('tablet') {
-      max-width: 220px;
-      height: auto;
-    }
-    @include media-query('mobile') {
-      max-width: 160px;
-      height: auto;
+    border-radius: 16px;
+    width: 100%;
+  }
+
+  &__actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    width: 100%;
+  }
+
+  &__button {
+    display: flex;
+    height: 48px;
+    width: 48px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 64px;
+    background: #545957;
+  }
+}
+/* Контейнер для стрілок та пагінації */
+.slick-slider {
+  width: 100%;
+  position: relative;
+  padding-bottom: 100px; /* Додаємо простір під слайдер для стрілок і пагінації */
+}
+
+.slick-prev,
+.slick-next {
+  position: absolute;
+  top: auto;
+  bottom: 0px;
+  z-index: 1;
+  background-color: $color-btn-sec !important;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 40px !important;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer; /* Упевнись, що стрілки мають курсор */
+}
+
+/* Ліва стрілка */
+.slick-prev {
+  left: 10px;
+}
+
+/* Права стрілка */
+.slick-next {
+  right: 10px;
+}
+
+/* Позиціонуємо пагінацію внизу по центру */
+.slick-dots {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  bottom: 24px; /* Теж вниз під слайдер */
+
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.slick-dots li {
+  margin: 0 5px; /* Відступи між точками пагінації */
+}
+
+.slick-dots li button:before {
+  font-size: 16px;
+  color: #2c3430;
+}
+.slick-dots li.slick-active button:before {
+  font-size: 16px;
+  color: $color-btn-sec;
+}
+
+.team__items button.slick-next::before,
+.team__items button.slick-prev::before {
+  display: none;
+}
+
+.team__items {
+  display: flex; /* Для відображення айтемів в ряд на десктопі */
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.team__item {
+  flex: 1 0 30%; /* Налаштуй ширину айтемів на десктопі */
+  margin: 10px; /* Відступи між айтемами */
+}
+
+.popup {
+  z-index: 12;
+  display: none; /* Hidden by default */
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  justify-content: end;
+  align-items: start;
+
+  &__img {
+    width: 100%;
+    height: 320px;
+    flex-shrink: 0;
+    background-color: #a6a6a6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    & img {
+      height: 100%;
     }
   }
+
+  &__title {
+    color: var(--Text-Tertiary, #161b17);
+    font-family: Satoshi;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 28px;
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+
+  &__description {
+    color: #545957;
+    text-align: left;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: var(--Line-Height-xs, 24px); /* 133.333% */
+    overflow: scroll;
+  }
+
+  &__links {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__copy {
+    padding: 40px 48px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: start;
+    justify-self: start;
+    width: 100%;
+    overflow: scroll;
+  }
+
+  &__line {
+    width: 100%;
+    height: 1px;
+    background-color: $color-border-light;
+  }
+
+  &__name {
+    color: $color-text-ter;
+
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 56px;
+  }
+
+  &__head {
+    width: 100%;
+    text-align: left;
+  }
+}
+
+.popup__content {
+  position: relative;
+  background: white;
+  text-align: center;
+  height: 100%;
+  display: flex;
+  width: 824px;
+  flex-direction: column;
+  align-items: flex-start;
+  overflow: scroll;
+}
+
+.popup__close {
+  position: absolute;
+  right: 32px;
+  top: 32px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  height: 48px;
+  width: 48px;
+  border-radius: 64px;
+  background: $color-btn-sec;
 }
