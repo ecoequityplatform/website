@@ -103,11 +103,11 @@
     background: #545957;
   }
 }
-/* Контейнер для стрілок та пагінації */
+
 .slick-slider {
   width: 100%;
   position: relative;
-  padding-bottom: 100px; /* Додаємо простір під слайдер для стрілок і пагінації */
+  padding-bottom: 100px;
 }
 
 .slick-prev,
@@ -125,25 +125,22 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  cursor: pointer; /* Упевнись, що стрілки мають курсор */
+  cursor: pointer;
 }
 
-/* Ліва стрілка */
 .slick-prev {
   left: 10px;
 }
 
-/* Права стрілка */
 .slick-next {
   right: 10px;
 }
 
-/* Позиціонуємо пагінацію внизу по центру */
 .slick-dots {
   display: flex;
   justify-content: center;
   position: absolute;
-  bottom: 24px; /* Теж вниз під слайдер */
+  bottom: 24px;
 
   list-style: none;
   padding: 0;
@@ -151,7 +148,7 @@
 }
 
 .slick-dots li {
-  margin: 0 5px; /* Відступи між точками пагінації */
+  margin: 0 5px;
 }
 
 .slick-dots li button:before {
@@ -169,20 +166,20 @@
 }
 
 .team__items {
-  display: flex; /* Для відображення айтемів в ряд на десктопі */
+  display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
 }
 
 .team__item {
-  flex: 1 0 30%; /* Налаштуй ширину айтемів на десктопі */
-  margin: 10px; /* Відступи між айтемами */
+  flex: 1 0 30%;
+  margin: 10px;
 }
 
 .popup {
   z-index: 12;
-  display: none; /* Hidden by default */
+  display: none;
   position: fixed;
   left: 0;
   top: 0;
@@ -237,7 +234,7 @@
     font-size: 18px;
     font-style: normal;
     font-weight: 400;
-    line-height: var(--Line-Height-xs, 24px); /* 133.333% */
+    line-height: var(--Line-Height-xs, 24px);
     overflow: scroll;
 
     @include media-query('tablet') {
