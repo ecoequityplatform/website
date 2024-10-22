@@ -683,15 +683,15 @@
             <h2 class="h1">Contact Us</h2>
           </div>
           <form
-            action="mailto:compliance@ecoequityplatform.com"
+            action="https://ecoequity-api.azurewebsites.net/Email/Send"
             class="contact__form"
           >
             <input type="hidden" name="subject" value="EcoEquity" />
-            <input class="input" type="text" id="name" placeholder="Name" />
+            <input class="input" type="text" name="name" placeholder="Name" />
             <input
               class="input"
               type="email"
-              id="email"
+              name="email"
               placeholder="Email"
               required
             />
