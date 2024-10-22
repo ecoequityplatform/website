@@ -4,10 +4,10 @@ function toggleExpand(header) {
 
   if (content.style.display === 'none' || content.style.display === '') {
     content.style.display = 'block';
-    icon.src = '../svg/minus.svg';
+    icon.src = './svg/minus.svg';
   } else {
     content.style.display = 'none';
-    icon.src = '../svg/plus.svg';
+    icon.src = './svg/plus.svg';
   }
 }
 
