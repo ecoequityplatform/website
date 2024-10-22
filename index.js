@@ -36,7 +36,6 @@ document.addEventListener('DOMContentLoaded', () => {
     body.classList.toggle('no-scroll');
   });
 
-  // Закриття меню при кліку на навігаційний елемент
   navLinks.forEach((link) => {
     link.addEventListener('click', () => {
       headerBurger.classList.remove('active');
@@ -141,7 +140,6 @@ function renderTeamMembers() {
     const itemDiv = document.createElement('div');
     itemDiv.classList.add('slick__item');
 
-    // Перевірка, чи існують посилання на соцмережі
     const linkedinIcon =
       member.linkedin && member.linkedin.trim() !== '#'
         ? `<a target="_blank" href="${member.linkedin}"><img src="./svg/li.svg" alt="linkedin" /></a>`
@@ -218,12 +216,10 @@ init();
 $(document).ready(function () {
   function initSlick() {
     if ($(window).width() > 1200) {
-      // Вимкнути слайдер для десктопу
       if ($('.team__items').hasClass('slick-initialized')) {
         $('.team__items').slick('unslick'); // Вимкнути слайдер
       }
     } else {
-      // Увімкнути слайдер для мобільних та планшетів
       if (!$('.team__items').hasClass('slick-initialized')) {
         $('.team__items').slick({
           dots: true,
@@ -238,7 +234,7 @@ $(document).ready(function () {
             '<button type="button" class="slick-next"><img src="./svg/arrow_right.svg" alt="Next"</button>',
           responsive: [
             {
-              breakpoint: 1024, // Для планшетів
+              breakpoint: 1024,
               settings: {
                 slidesToShow: 2,
                 slidesToScroll: 1,
@@ -247,7 +243,7 @@ $(document).ready(function () {
               },
             },
             {
-              breakpoint: 600, // Для мобільних пристроїв
+              breakpoint: 600,
               settings: {
                 slidesToShow: 1,
                 slidesToScroll: 1,
@@ -261,83 +257,9 @@ $(document).ready(function () {
     }
   }
 
-  // Викликати функцію при завантаженні сторінки
   initSlick();
 
-  // Викликати функцію при зміні розміру вікна
   $(window).resize(function () {
     initSlick();
   });
 });
-
-// $(document).ready(function () {
-//   // $('.team__items').slick({
-//   //   // autoplay: true,
-//   //   dots: true, // Відображення пагінації (крапки)
-//   //   arrows: true, // Відображення стрілок
-//   //   infinite: true, // Безкінечний слайд
-//   //   speed: 300, // Швидкість анімації слайду
-//   //   slidesToShow: 3, // Кількість слайдів, що відображаються одночасно
-//   //   slidesToScroll: 2, // Кількість слайдів, що прокручуються
-
-//   //   prevArrow:
-//   //     '<button type="button" class="slick-prev"><img src="/svg/arrow_left.svg" alt="Previous" /></button>',
-//   //   nextArrow:
-//   //     '<button type="button" class="slick-next"><img src="/svg/arrow_right.svg" alt="Next"</button>',
-//   //   responsive: [
-//   //     {
-//   //       breakpoint: 1024,
-//   //       settings: {
-//   //         slidesToShow: 2, // Кількість слайдів для планшетів
-//   //         slidesToScroll: 1,
-//   //         infinite: true,
-//   //         dots: true,
-//   //       },
-//   //     },
-//   //     {
-//   //       breakpoint: 600,
-//   //       settings: {
-//   //         slidesToShow: 1, // Кількість слайдів для мобільних пристроїв
-//   //         slidesToScroll: 1,
-//   //       },
-//   //     },
-//   //   ],
-//   // });
-
-//   $('.team__items').slick({
-//     dots: true,
-//     arrows: true,
-//     infinite: true,
-//     speed: 300,
-//     slidesToShow: 3, // Кількість слайдів на десктопі
-//     slidesToScroll: 1,
-//     prevArrow:
-//       '<button type="button" class="slick-prev"><img src="/path/to/your/left-arrow-image.svg" alt="Previous" /></button>',
-//     nextArrow:
-//       '<button type="button" class="slick-next"><img src="/path/to/your/right-arrow-image.svg" alt="Next" /></button>',
-//     responsive: [
-//       {
-//         breakpoint: 1024, // Для планшетів
-//         settings: {
-//           slidesToShow: 2, // Кількість слайдів на планшеті
-//           slidesToScroll: 1,
-//           dots: true,
-//           arrows: true,
-//         },
-//       },
-//       {
-//         breakpoint: 600, // Для мобільних пристроїв
-//         settings: {
-//           slidesToShow: 1, // Кількість слайдів на мобільному
-//           slidesToScroll: 1,
-//           dots: true,
-//           arrows: true,
-//         },
-//       },
-//       {
-//         breakpoint: 1200, // Для десктопів
-//         settings: 'unslick', // Вимикаємо слайдер
-//       },
-//     ],
-//   });
-// });
