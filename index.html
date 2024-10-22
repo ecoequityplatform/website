@@ -685,6 +685,7 @@
           <form
             action="https://ecoequity-api.azurewebsites.net/Email"
             class="contact__form"
+            method="post"
           >
             <input type="hidden" name="subject" value="EcoEquity" />
             <input class="input" type="text" name="name" placeholder="Name" />
@@ -707,7 +708,9 @@
               id="message"
               placeholder="Message"
             ></textarea>
-            <button class="btn btn__sec contact__btn">Contact Us</button>
+            <button type="submit" class="btn btn__sec contact__btn">
+              Contact Us
+            </button>
           </form>
         </div>
         <footer class="footer container">
