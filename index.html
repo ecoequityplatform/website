@@ -682,9 +682,19 @@
           <div class="contact__header">
             <h2 class="h1">Contact Us</h2>
           </div>
-          <form action="#" class="contact__form">
+          <form
+            action="mailto:compliance@ecoequityplatform.com"
+            class="contact__form"
+          >
+            <input type="hidden" name="subject" value="EcoEquity" />
             <input class="input" type="text" id="name" placeholder="Name" />
-            <input class="input" type="email" id="email" placeholder="Email" />
+            <input
+              class="input"
+              type="email"
+              id="email"
+              placeholder="Email"
+              required
+            />
             <input
               class="input"
               type="text"
