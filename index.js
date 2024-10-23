@@ -111,7 +111,7 @@ A passionate traveller, a poor musician, and an avid learner of new technologies
   {
     name: 'Sarah Petrik',
     title: 'Head of Recruitment',
-    description: `arah brings over a decade of experience in talent acquisition, having worked across diverse industries and organizations of varying scale. With a proven track record of building high-performing teams, Sarah has a deep understanding of the talent landscape and a passion for attracting and retaining top talent.
+    description: `Sarah brings over a decade of experience in talent acquisition, having worked across diverse industries and organizations of varying scale. With a proven track record of building high-performing teams, Sarah has a deep understanding of the talent landscape and a passion for attracting and retaining top talent.
 
 As a strategic talent acquisition leader, Sarah has successfully navigated complex talent landscapes, teams and implemented innovative recruiting strategies. Her ability to foster strong relationships, identify top talent, and leverage data-driven insights has been instrumental in driving organizational growth and success.
 
