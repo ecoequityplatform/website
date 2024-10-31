@@ -1278,6 +1278,8 @@ select:-webkit-autofill {
   font-weight: 500;
   line-height: 22px;
   text-align: start;
+  max-width: 373px;
+  height: 40px;
 }
 .team__name {
   color: #7ce949;
@@ -1851,6 +1853,9 @@ select:-webkit-autofill {
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: end;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
   z-index: 10;
 }
 .cookie__inner {
@@ -1869,6 +1874,10 @@ select:-webkit-autofill {
   gap: 24px;
   border-top: 1px solid var(--Border-Light, #545957);
   background: #161b17;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
 }
 .cookie__top {
   display: -webkit-box;

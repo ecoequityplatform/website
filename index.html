@@ -24,11 +24,11 @@
   </head>
 
   <body>
-    <!-- <div class="cookie">
+    <div class="cookie" id="cookie-banner" style="display: none">
       <div class="cookie__inner">
         <div class="cookie__top">
           <p class="cookie__title">We value your privacy</p>
-          <button class="cookie__close">
+          <button class="cookie__close" onclick="closeCookieBanner()">
             <img src="/svg/close.svg" alt="close" />
           </button>
         </div>
@@ -37,16 +37,27 @@
             EcoEquity values your privacy. We use cookies to enhance your
             browsing experience, personalize content on the website, and analyze
             our website traffic. Here is a link to our
-            <a class="cookie__link" href="#">Cookie Policy</a>
+            <a class="cookie__link" target="_blank" href="cookie.html"
+              >Cookie Policy</a
+            >
           </p>
           <div class="cookie__actions">
-            <button class="btn btn__sec">Reject non-essential</button>
-            <button class="btn btn__sec">Reject all</button>
-            <button class="btn btn__sec">Accept all</button>
+            <button
+              class="btn btn__sec"
+              onclick="setCookie('rejected-non-essential')"
+            >
+              Reject non-essential
+            </button>
+            <button class="btn btn__sec" onclick="setCookie('rejected-all')">
+              Reject all
+            </button>
+            <button class="btn btn__sec" onclick="setCookie('accepted-all')">
+              Accept all
+            </button>
           </div>
         </div>
       </div>
-    </div> -->
+    </div>
     <header id="hero">
       <div class="header">
         <a href="#hero">
@@ -152,15 +163,19 @@
           <div class="opportunity__content">
             <div class="opportunity__left">
               <p>
-                The global carbon credit market is on the rise, expected to
-                reach a staggering $136 billion by 2025. As businesses and
-                governments worldwide become more committed to reducing their
-                carbon footprints, the demand for carbon credits will continue
-                to surge. EcoEquity is strategically positioned to capture 2% of
-                this rapidly expanding market, translating to over $2 billion in
-                transactions.
+                The global carbon credit market is anticipated to reach an
+                impressive $136 billion by 2025. EcoEquity’s blockchain-based
+                platform is designed to capture a significant share of this
+                market by providing transparent and efficient carbon credit
+                solutions. As a point of reference, securing just 2% of this
+                market would equate to over $2 billion in transactions. Even
+                with a modest market penetration, EcoEquity has the potential to
+                generate substantial value and contribute to impactful climate
+                solutions. With the increasing demand for carbon credits,
+                EcoEquity presents investors with an opportunity to engage in a
+                high-growth sector with considerable scalability.
               </p>
-              <p>
+              <!-- <p>
                 By offering a transparent, efficient, and accessible platform,
                 EcoEquity is poised to become a trusted partner in the carbon
                 credit space, enabling businesses and individuals alike to
@@ -168,7 +183,7 @@
                 toward more stringent sustainability goals, EcoEquity offers
                 investors the opportunity to not only participate in this growth
                 but to lead it.
-              </p>
+              </p> -->
               <a class="btn btn__sec" href="#contact">Invest in the Future</a>
             </div>
             <img src="./svg/opportunity.svg" alt="illustration" />
@@ -272,10 +287,11 @@
             <div class="future__copy">
               <h6>Efficiency</h6>
               <p class="future__text">
-                Traditional carbon credit markets are slow and burdened by high
-                transaction fees, which limits participation. EcoEquity
-                streamlines the entire process, eliminating inefficiencies and
-                reducing costs, allowing for faster, simpler trading.
+                Traditional carbon credit markets are slow and encumbered by
+                high transaction fees, which limits participation and access to
+                liquidity. EcoEquity simplifies the entire process, creating a
+                more efficient and liquid market that reduces costs and speeds
+                up trading.
               </p>
             </div>
           </div>

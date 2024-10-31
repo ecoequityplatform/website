@@ -6,6 +6,7 @@
   height: 100vh;
   display: flex;
   align-items: end;
+  justify-content: end;
   z-index: 10;
 
   &__inner {
@@ -17,6 +18,10 @@
     gap: 24px;
     border-top: 1px solid var(--Border-Light, #545957);
     background: #161b17;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
   }
 
   &__top {

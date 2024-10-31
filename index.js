@@ -1,3 +1,24 @@
+function getCookie(name) {
+  const value = `; ${document.cookie}`;
+  const parts = value.split(`; ${name}=`);
+  if (parts.length === 2) return parts.pop().split(';').shift();
+}
+
+function setCookie(value) {
+  document.cookie = `userCookieConsent=${value}; path=/; max-age=31536000`;
+  closeCookieBanner();
+}
+
+function closeCookieBanner() {
+  document.getElementById('cookie-banner').style.display = 'none';
+}
+
+window.onload = function () {
+  if (!getCookie('userCookieConsent')) {
+    document.getElementById('cookie-banner').style.display = 'block';
+  }
+};
+
 function toggleExpand(header) {
   const content = header.nextElementSibling;
   const icon = header.querySelector('.toggle-icon');
@@ -101,6 +122,18 @@ A passionate traveller, a poor musician, and an avid learner of new technologies
     xUrl: '#',
   },
   {
+    name: 'Elay Koren',
+    title: 'Strategic Partnerships & Sustainability Advisor',
+    description: `Elay Koren is a seasoned environmental manager with over 13 years of experience in environmental management, including more than a decade in leadership roles. He has a proven track record in advancing compliance and sustainability, specializing in policy development related to urban planning and environmental initiatives.
+
+Elay excels at driving cost-effective waste and energy reduction strategies that align with corporate and organizational sustainability objectives. His expertise includes managing and guiding professional teams to achieve high compliance rates, fostering both organizational and community-wide sustainability. His experience spans budgeting and executing multi-billion-dollar plans, emphasizing efficiency and impactful results.
+
+Elay’s career has seen him appointed as an advisor on climate action and sustainability initiatives at municipal, regional, and corporate levels. Passionate about shaping human engagement in climate adaptation and mitigation, Elay remains dedicated to advancing meaningful climate actions.`,
+    imgSrc: './images/elay.jpg',
+    linkedin: 'https://www.linkedin.com/in/ek84/',
+    xUrl: '#',
+  },
+  {
     name: 'Yuliia Shevchenko',
     title: 'UX/UI Design Lead',
     description: `Yuliia is a passionate UX/UI designer focused on creating digital experiences that make an impact. Design is more than just a profession—it's a way to merge creativity and functionality into seamless, user-friendly designs. From mobile apps to enterprise software, Yuliia is dedicated to delivering modern, immaculate designs of the highest standard. With a human-centered approach, Yuliia empathizes with users, identifies their pain points, and crafts solutions that enhance their experience with your brand or product. A lover of travel and living in different countries, Yuliia draws inspiration from diverse cultures to enrich the design process.`,
@@ -127,7 +160,7 @@ Sarah holds her Masters of Business Administration with a concentration in Strat
 
 In his recent work, Kevin led branding initiatives in the web3 space at Airfoil, developing brand systems for various organizations. At ApplyBoard, he helped international students gain access to quality education by managing a wide array of design projects. His experience also includes roles at various companies where he contributed to branding and marketing efforts.`,
     imgSrc: './images/kevin.jpg',
-    linkedin: 'linkedin.com/in/kevin-tome-b212a896',
+    linkedin: 'https://www.linkedin.com/in/kevin-tome-b212a896',
     xUrl: '#',
   },
 ];
@@ -173,6 +206,7 @@ function renderTeamMembers() {
 }
 
 // Function to open popup
+// Function to open popup
 function openPopup(member) {
   document.getElementById('popupImg').src = member.imgSrc;
   document.getElementById('popupName').innerText = member.name;
@@ -180,10 +214,25 @@ function openPopup(member) {
   document.getElementById('popupDescription').innerText = member.description;
 
   const linksContainer = document.querySelector('.popup__links');
-  linksContainer.innerHTML = `
-      <a href="${member.linkedin}"><img src="./svg/li-green.svg" alt="linkedin" /></a>
-      <a href="${member.xUrl}"><img src="./svg/x-green.svg" alt="x" /></a>
-  `;
+  linksContainer.innerHTML = ''; // Очищаємо попередній вміст
+
+  // Додаємо іконку LinkedIn, якщо посилання існує
+  if (member.linkedin && member.linkedin !== '#') {
+    const linkedinLink = document.createElement('a');
+    linkedinLink.href = member.linkedin;
+    linkedinLink.target = '_blank';
+    linkedinLink.innerHTML = `<img src="./svg/li-green.svg" alt="linkedin" />`;
+    linksContainer.appendChild(linkedinLink);
+  }
+
+  // Додаємо іконку X, якщо посилання існує
+  if (member.xUrl && member.xUrl !== '#') {
+    const xLink = document.createElement('a');
+    xLink.href = member.xUrl;
+    xLink.target = '_blank';
+    xLink.innerHTML = `<img src="./svg/x-green.svg" alt="x" />`;
+    linksContainer.appendChild(xLink);
+  }
 
   document.getElementById('popup').style.display = 'flex';
 }
