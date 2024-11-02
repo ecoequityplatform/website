@@ -47,4 +47,38 @@
     padding-left: 24px;
     color: $color-btn-sec;
   }
+
+  &__text {
+    line-height: 20px;
+    font-weight: 300;
+  }
+
+  &__ul {
+    padding-left: 32px;
+    list-style: inside;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    &_sub {
+      padding-left: 32px;
+      list-style: square;
+    }
+  }
+
+  &__sub {
+    font-size: 16px;
+    font-weight: 500;
+    color: $color-text-main;
+  }
+
+  &__header {
+    font-size: 20px;
+    font-weight: 500;
+  }
+}
+
+strong {
+  font-weight: 500;
+  color: $color-text-main;
 }

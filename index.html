@@ -3,6 +3,45 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta
+      name="description"
+      content="Join the EcoEquity Platform to revolutionize carbon credit trading with blockchain technology. Experience secure, transparent transactions that empower businesses and individuals to make a real impact on climate change."
+    />
+    <meta
+      name="keywords"
+      content="carbon credits, blockchain platform, sustainable trading, carbon offset, secure transactions, EcoEquity"
+    />
+    <meta
+      property="og:title"
+      content="Unlocking the Future of Carbon Credit Trading Through Blockchain Technology"
+    />
+    <meta
+      property="og:description"
+      content="Empowering businesses and individuals to combat climate change through a transparent, secure, and efficient platform."
+    />
+    <meta
+      property="og:image"
+      content="https://ecoequityplatform.github.io/website/images/thumbnail.png"
+    />
+    <meta
+      property="og:url"
+      content="https://ecoequityplatform.github.io/website/"
+    />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Unlocking the Future of Carbon Credit Trading Through Blockchain Technology"
+    />
+    <meta
+      name="twitter:description"
+      content="Empowering businesses and individuals to combat climate change through a transparent, secure, and efficient platform."
+    />
+    <meta
+      name="twitter:image"
+      content="https://ecoequityplatform.github.io/website/images/thumbnail.png"
+    />
     <link
       rel="stylesheet"
       type="text/css"
@@ -24,7 +63,7 @@
   </head>
 
   <body>
-    <div class="cookie" id="cookie-banner" style="display: none">
+    <!-- <div class="cookie" id="cookie-banner" style="display: none">
       <div class="cookie__inner">
         <div class="cookie__top">
           <p class="cookie__title">We value your privacy</p>
@@ -57,7 +96,7 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
     <header id="hero">
       <div class="header">
         <a href="#hero">
@@ -66,23 +105,33 @@
         <nav class="header__nav">
           <ul class="nav">
             <li class="nav__item">
-              <a class="nav__link" href="#about">About</a>
-              <img class="nav__img" src="./svg/arrov-nav.svg" alt="" />
+              <a href="#about">
+                <span class="nav__link">About</span>
+                <img class="nav__img" src="./svg/arrov-nav.svg" alt="arrow"
+              /></a>
             </li>
             <li class="nav__item">
-              <a class="nav__link" href="#opportunity">Market Opportunity</a>
-              <img class="nav__img" src="./svg/arrov-nav.svg" alt="" />
+              <a href="#opportunity">
+                <span class="nav__link">Market Opportunity</span>
+                <img class="nav__img" src="./svg/arrov-nav.svg" alt="arrow"
+              /></a>
             </li>
             <li class="nav__item">
-              <a class="nav__link" href="#solution">Our Solution</a>
-              <img class="nav__img" src="./svg/arrov-nav.svg" alt="" />
+              <a href="#solution">
+                <span class="nav__link">Our Solution</span>
+                <img class="nav__img" src="./svg/arrov-nav.svg" alt="arrow"
+              /></a>
             </li>
             <li class="nav__item">
-              <a class="nav__link" href="#team">Team</a>
-              <img class="nav__img" src="./svg/arrov-nav.svg" alt="" />
+              <a href="#team">
+                <span class="nav__link">Team</span>
+                <img class="nav__img" src="./svg/arrov-nav.svg" alt="arrow"
+              /></a>
             </li>
             <li class="nav__item">
-              <a class="nav__link btn btn__ter" href="#contact">Contact Us</a>
+              <a href="#contact">
+                <span class="nav__link btn btn__ter">Contact Us</span></a
+              >
             </li>
           </ul>
         </nav>
@@ -175,15 +224,7 @@
                 EcoEquity presents investors with an opportunity to engage in a
                 high-growth sector with considerable scalability.
               </p>
-              <!-- <p>
-                By offering a transparent, efficient, and accessible platform,
-                EcoEquity is poised to become a trusted partner in the carbon
-                credit space, enabling businesses and individuals alike to
-                contribute meaningfully to climate solutions. As the world moves
-                toward more stringent sustainability goals, EcoEquity offers
-                investors the opportunity to not only participate in this growth
-                but to lead it.
-              </p> -->
+
               <a class="btn btn__sec" href="#contact">Invest in the Future</a>
             </div>
             <img src="./svg/opportunity.svg" alt="illustration" />
@@ -497,16 +538,24 @@
             action="https://ecoequity-api.azurewebsites.net/Email"
             class="contact__form"
             method="post"
+            novalidate
           >
             <input type="hidden" name="subject" value="EcoEquity" />
             <input class="input" type="text" name="name" placeholder="Name" />
-            <input
-              class="input"
-              type="email"
-              name="email"
-              placeholder="Email"
-              required
-            />
+
+            <div class="input-container">
+              <input
+                class="input"
+                type="email"
+                name="email"
+                placeholder="Email"
+                required
+                id="email"
+              />
+              <p class="error-message" id="email-error">
+                Please enter a valid email address.
+              </p>
+            </div>
 
             <textarea
               class="input-area"
@@ -514,6 +563,18 @@
               id="message"
               placeholder="Message"
             ></textarea>
+
+            <label class="custom-checkbox">
+              <input
+                type="checkbox"
+                id="accept_policy"
+                name="accept_policy"
+                value="confirm"
+              />
+              Accept EcoEquity's Privacy Policy
+              <span class="checkbox-box"></span>
+            </label>
+
             <button type="submit" class="btn btn__sec contact__btn">
               Contact Us
             </button>
@@ -524,18 +585,32 @@
             <div class="footer__left">
               <a href="#hero"><img src="./svg/Logo.svg" alt="logo" /></a>
               <div class="footer__links">
-                <a class="footer__link" href="#"> Privacy Policy </a>
-                <a class="footer__link" href="#"> Terms of Use</a>
+                <a
+                  class="footer__link"
+                  href="privacy_policy.html"
+                  target="_blank"
+                >
+                  Privacy Policy
+                </a>
               </div>
             </div>
             <div class="footer__right">
-              <a href="#"><img src="./svg/li.svg" alt="linkedin" /></a>
-              <a href="#"><img src="./svg/x.svg" alt="x" /></a>
+              <a
+                href="https://www.linkedin.com/company/ecoequity/"
+                target="_blank"
+                ><img src="./svg/li.svg" alt="linkedin"
+              /></a>
+              <a href="https://x.com/EcoEquityPltfrm" target="_blank"
+                ><img src="./svg/x.svg" alt="twitter-x"
+              /></a>
             </div>
           </div>
           <div class="footer__bottom">
             <span class="footer__text"
               >Copyright © 2024 EcoEquity. All rights reserved.</span
+            >
+            <span class="footer__text"
+              >The EcoEquity website does not use cookies.</span
             >
           </div>
         </footer>

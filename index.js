@@ -1,23 +1,23 @@
-function getCookie(name) {
-  const value = `; ${document.cookie}`;
-  const parts = value.split(`; ${name}=`);
-  if (parts.length === 2) return parts.pop().split(';').shift();
-}
+// function getCookie(name) {
+//   const value = `; ${document.cookie}`;
+//   const parts = value.split(`; ${name}=`);
+//   if (parts.length === 2) return parts.pop().split(';').shift();
+// }
 
-function setCookie(value) {
-  document.cookie = `userCookieConsent=${value}; path=/; max-age=31536000`;
-  closeCookieBanner();
-}
+// function setCookie(value) {
+//   document.cookie = `userCookieConsent=${value}; path=/; max-age=31536000`;
+//   closeCookieBanner();
+// }
 
-function closeCookieBanner() {
-  document.getElementById('cookie-banner').style.display = 'none';
-}
+// function closeCookieBanner() {
+//   document.getElementById('cookie-banner').style.display = 'none';
+// }
 
-window.onload = function () {
-  if (!getCookie('userCookieConsent')) {
-    document.getElementById('cookie-banner').style.display = 'block';
-  }
-};
+// window.onload = function () {
+//   if (!getCookie('userCookieConsent')) {
+//     document.getElementById('cookie-banner').style.display = 'block';
+//   }
+// };
 
 function toggleExpand(header) {
   const content = header.nextElementSibling;
@@ -311,4 +311,17 @@ $(document).ready(function () {
   $(window).resize(function () {
     initSlick();
   });
+});
+
+const emailInput = document.getElementById('email');
+const emailError = document.getElementById('email-error');
+
+emailInput.addEventListener('blur', function () {
+  if (!emailInput.checkValidity()) {
+    emailInput.classList.add('error');
+    emailError.style.display = 'block';
+  } else {
+    emailInput.classList.remove('error');
+    emailError.style.display = 'none';
+  }
 });

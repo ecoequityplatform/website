@@ -65,6 +65,13 @@
     padding-top: 32px;
     width: 100%;
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include media-query('tablet') {
+      flex-direction: column;
+      justify-content: center;
+      gap: 8px;
+    }
   }
 
   &__text {

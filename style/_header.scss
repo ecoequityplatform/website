@@ -158,3 +158,12 @@
     display: flex;
   }
 }
+
+.nav__item a {
+  @include media-query('tablet') {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+}
