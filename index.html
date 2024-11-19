@@ -538,10 +538,11 @@
             action="https://ecoequity-api.azurewebsites.net/Email"
             class="contact__form"
             method="post"
-            novalidate
+            id="formContact"
+            target="none"
           >
             <input type="hidden" name="subject" value="EcoEquity" />
-            <input class="input" type="text" name="name" placeholder="Name" />
+            <input class="input" type="text" name="name" placeholder="Name" required />
 
             <div class="input-container">
               <input
@@ -576,10 +577,12 @@
               <span class="checkbox-box"></span>
             </label>
 
+            <div id="contactThanks" class="contact-thanks">Thanks for your message, we'll be in touch soon.</div>
             <button type="submit" class="btn btn__sec contact__btn">
               Contact Us
             </button>
           </form>
+          <iframe name="none" style="visibility:hidden;"></iframe>
         </div>
         <footer class="footer container">
           <div class="footer__top">
