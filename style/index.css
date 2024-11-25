@@ -2494,3 +2494,7 @@ p {
   padding: 0 48px;
   background-color: #2c3430;
 }
+
+.contact-thanks {
+    display: none;
+}

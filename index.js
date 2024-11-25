@@ -318,3 +318,9 @@ emailInput.addEventListener('blur', function () {
     emailError.style.display = 'none';
   }
 });
+
+document
+    .getElementById('formContact')
+    .addEventListener('submit', function () {
+        document.getElementById('contactThanks').style.display = 'block';
+    });
