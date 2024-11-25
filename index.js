@@ -103,14 +103,7 @@ A passionate traveller, a poor musician, and an avid learner of new technologies
     linkedin: 'https://linkedin.com/in/stefanotempesta',
     xUrl: 'https://x.com/stefanotempesta',
   },
-  {
-    name: 'Chase Bradshaw',
-    title: 'Chief Financial Officer',
-    description: `Chase is an experienced finance leader specializing in early-stage, hyper-growth SaaS startups. With a proven track record in strategic business planning, he drives both short- and long-term growth strategies by modeling financial impacts and making data-driven recommendations that enhance profitability and cash management. He excels at establishing robust financial controls to ensure compliance, audit success, and operational efficiency. Chase is also skilled in implementing precise financial reporting systems that consistently deliver accurate forecasts. Additionally, he recruits and develops top-tier finance talent to build high-performing teams.`,
-    imgSrc: './images/chase.jpg',
-    linkedin: '#',
-    xUrl: '#',
-  },
+
   {
     name: 'Gregory Vint',
     title: 'Chief Legal & Compliance Officer',
