@@ -137,6 +137,32 @@ Richard has held executive sales leadership roles at industry-leading companies,
     linkedin: '#',
     xUrl: '#',
   },
+
+    {
+    name: 'David Shoaf',
+    title: 'SVP Carbon Markets & Partnerships',
+    description: `David Shoaf is a seasoned environment and finance professional with over two decades of expertise spanning commodities, agriculture, renewable energy, and investment banking. His career reflects a deep commitment to sustainability, with a focus on navigating the complexities of environmental markets and guiding companies, developers, and producers through the evolving challenges of responsible growth.
+
+With a proven track record of transforming concepts into successful programs, David has been instrumental in building digital ecosystems that empower commercial partners with critical operational intelligence. His work has supported key areas such as Carbon Credits, CI Scoring, ISCC standards, sustainable crop sourcing, responsible crop protection, sustainable seeds, consumer packaged goods (CPG) sustainability, sustainable finance, 4R nutrient management, and the integration of cover crops.
+
+David’s leadership has consistently driven team alignment and long-term growth, fostering innovative solutions that bridge the gap between environmental stewardship and business success. His passion lies in helping companies and individuals better understand their greenhouse gas emissions and develop actionable strategies to reduce their carbon footprint, advancing global efforts toward a more sustainable future.`,
+    imgSrc: './images/david_s.jpg',
+    linkedin: '#',
+    xUrl: '#',
+  },
+
+   {
+    name: 'Cyndi McIntyre',
+    title: 'SVP Enterprise & Corporate Sales',
+    description: `Cyndi is a seasoned sales executive with over 25 years of experience driving growth and innovation across technology sectors including Enterprise Software, AI, Data Analytics, and SaaS. Her leadership spans organizations from nimble startups to Fortune 100 companies, where she has consistently exceeded sales targets and delivered transformative results.
+
+She has played a pivotal role in guiding companies through mergers and acquisitions, ensuring seamless integration and fostering cohesive, high-performing teams. Cyndi’s strategic, data-driven approach has repeatedly translated into robust revenue growth and enhanced market positioning, establishing her as a trusted leader in the tech industry.
+
+Cyndi holds a Bachelor of Science in Business Administration from Central Michigan University.`,
+    imgSrc: './images/cyndi.jpg',
+    linkedin: '#',
+    xUrl: '#',
+  },
   
   {
     name: 'Yuliia Shevchenko',
