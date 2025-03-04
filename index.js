@@ -126,6 +126,18 @@ Elay’s career has seen him appointed as an advisor on climate action and susta
     linkedin: 'https://www.linkedin.com/in/ek84/',
     xUrl: '#',
   },
+  
+   {
+    name: 'Richard C. Allin Jr.',
+    title: 'SVP Institutional Sales & Partnerships',
+    description: `Richard Allin is a seasoned sales and business development leader with over 25 years of experience driving revenue growth for global technology firms. He has built and led high-performing sales teams, developed go-to-market strategies, and expanded market presence across the Americas, Europe, and Asia. Throughout his career, Richard has successfully navigated enterprise software sales, SaaS solutions, and fintech platforms, consistently delivering results in both startup and multinational environments. His expertise lies in relationship management, strategic partnerships, and driving long-term, scalable growth.
+    
+Richard has held executive sales leadership roles at industry-leading companies, including Engage XR, Assentis, Data Explorers, and SunGard/FIS. He has a proven track record of launching new markets, securing major enterprise deals, and mentoring sales teams to exceed targets. Richard holds a BS in Economics/Finance from West Chester University, an MS in International Business from Boston University, and a CSS in Management from Harvard University.`,
+    imgSrc: './images/Richard_Headshot.jpg',
+    linkedin: '#',
+    xUrl: '#',
+  },
+  
   {
     name: 'Yuliia Shevchenko',
     title: 'UX/UI Design Lead',
