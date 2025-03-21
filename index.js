@@ -151,18 +151,7 @@ David’s leadership has consistently driven team alignment and long-term growth
     xUrl: '#',
   },
 
-   {
-    name: 'Cyndi McIntyre',
-    title: 'SVP Enterprise & Corporate Sales',
-    description: `Cyndi is a seasoned sales executive with over 25 years of experience driving growth and innovation across technology sectors including Enterprise Software, AI, Data Analytics, and SaaS. Her leadership spans organizations from nimble startups to Fortune 100 companies, where she has consistently exceeded sales targets and delivered transformative results.
-
-She has played a pivotal role in guiding companies through mergers and acquisitions, ensuring seamless integration and fostering cohesive, high-performing teams. Cyndi’s strategic, data-driven approach has repeatedly translated into robust revenue growth and enhanced market positioning, establishing her as a trusted leader in the tech industry.
-
-Cyndi holds a Bachelor of Science in Business Administration from Central Michigan University.`,
-    imgSrc: './images/cyndi.jpg',
-    linkedin: '#',
-    xUrl: '#',
-  },
+ 
   
   {
     name: 'Yuliia Shevchenko',
