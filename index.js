@@ -1,23 +1,4 @@
-// function getCookie(name) {
-//   const value = `; ${document.cookie}`;
-//   const parts = value.split(`; ${name}=`);
-//   if (parts.length === 2) return parts.pop().split(';').shift();
-// }
 
-// function setCookie(value) {
-//   document.cookie = `userCookieConsent=${value}; path=/; max-age=31536000`;
-//   closeCookieBanner();
-// }
-
-// function closeCookieBanner() {
-//   document.getElementById('cookie-banner').style.display = 'none';
-// }
-
-// window.onload = function () {
-//   if (!getCookie('userCookieConsent')) {
-//     document.getElementById('cookie-banner').style.display = 'block';
-//   }
-// };
 
 function toggleExpand(header) {
   const content = header.nextElementSibling;
@@ -81,18 +62,7 @@ const teamMembers = [
     linkedin: ' https://www.linkedin.com/in/davidcullinan1979/',
     xUrl: '#',
   },
-  {
-    name: 'Frank Frausto',
-    title: 'Chief Marketing Officer',
-    description: `Frank Frausto is a seasoned digital marketing expert with a distinguished career spanning over two decades. Beginning his journey at Google in 2003, Frank played a pivotal role in scaling the company's sales operations, notably founding the first inside sales team and becoming the head sales trainer. During his tenure at Google, he contributed significantly to the Google Partners program, helping it evolve into a cornerstone of Google's business outreach efforts. Frank has partnered with companies large and small to optimize their digital marketing strategies, personally managing over 4,500 paid ad accounts across 15 years at Google. His expertise in sales and marketing, combined with his knack for innovative strategies, earned him a reputation as a leader in the tech industry.
 
-    In 2018, Frank transitioned from his role at Google to embark on a new entrepreneurial path, founding his own digital marketing agency. His work has since focused on leveraging his extensive knowledge of blockchain and cryptocurrency, guiding several startups in these emerging fields. Frank's approach combines deep technical understanding with strategic marketing insight, making him a sought-after consultant for businesses looking to navigate the complexities of digital transformation.
-
-    Outside of his professional pursuits, Frank is an avid sports enthusiast, an accomplished photographer, and a certified sommelier with a passion for wine tasting. His diverse interests and commitment to excellence in both his personal and professional life continue to drive his success and influence in the industry. `,
-    imgSrc: './images/frank.jpg',
-    linkedin: '#',
-    xUrl: '#',
-  },
   {
     name: 'Stefano Tempesta',
     title: 'Chief Technical Officer',
@@ -163,7 +133,7 @@ David’s leadership has consistently driven team alignment and long-term growth
   },
   {
     name: 'Sarah Petrik',
-    title: 'Head of Recruitment',
+    title: 'Director of People & Talent',
     description: `Sarah brings over a decade of experience in talent acquisition, having worked across diverse industries and organizations of varying scale. With a proven track record of building high-performing teams, Sarah has a deep understanding of the talent landscape and a passion for attracting and retaining top talent.
 
 As a strategic talent acquisition leader, Sarah has successfully navigated complex talent landscapes, teams and implemented innovative recruiting strategies. Her ability to foster strong relationships, identify top talent, and leverage data-driven insights has been instrumental in driving organizational growth and success.
